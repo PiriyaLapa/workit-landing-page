@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Learn React to challenge FrontEnd mentor<br/> of Workit-Landing-page</h2>
+        <p>Try to deploy</p>
       </header>
     </div>
   );

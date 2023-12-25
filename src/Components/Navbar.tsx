@@ -27,7 +27,7 @@ export default class Navbar extends Component {
   render(): ReactNode {
     return (
       <StyledNavbar theme={theme}>
-        <Logo />
+        {/* <Logo /> */}
         <button type="submit">buton</button>
       </StyledNavbar>
     );

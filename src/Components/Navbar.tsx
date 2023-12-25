@@ -13,12 +13,6 @@ const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   padding: 10px;
 `;
 
-// const Logo = styled.img.attrs((props) => ({src: props.logoIcon}))`
-//   width: 5.985em;
-//   height: 1.538em;
-//   display: inline-block;
-//   padding: 1.538em;
-// `;
 interface LogoProps {
   logoIcon: string;
 }
@@ -43,7 +37,6 @@ export default class Navbar extends Component {
   render(): ReactNode {
     return (
       <StyledNavbar theme={theme}>
-        {/* <Logo logoIcon={LogoIcon}/> */}
         <Logo logoIcon={LogoIcon} />
         <button type="submit">buton</button>
       </StyledNavbar>

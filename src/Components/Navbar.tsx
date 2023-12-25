@@ -13,22 +13,38 @@ const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   padding: 10px;
 `;
 
-// const Logo = styled.img`
+// const Logo = styled.img.attrs((props) => ({src: props.logoIcon}))`
 //   width: 5.985em;
 //   height: 1.538em;
 //   display: inline-block;
-//   background-image: url(${LogoIcon});
-//   background-repeat: no-repeat;
-//   background-position: left;
 //   padding: 1.538em;
 // `;
+interface LogoProps {
+  logoIcon: string;
+}
+class Logo extends Component<LogoProps> {
+  render(): ReactNode {
+    return (
+      <img
+        src={LogoIcon}
+        alt="logo"
+        style={{
+          width: "5.985em",
+          height: "1.538em",
+          display: "inline-block",
+          padding: "1.538em",
+        }}
+      />
+    );
+  }
+}
 
 export default class Navbar extends Component {
   render(): ReactNode {
     return (
       <StyledNavbar theme={theme}>
-        {/* <Logo /> */}
-        <img src="../assets/Logo.png" />
+        {/* <Logo logoIcon={LogoIcon}/> */}
+        <Logo logoIcon={LogoIcon} />
         <button type="submit">buton</button>
       </StyledNavbar>
     );

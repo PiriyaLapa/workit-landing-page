@@ -5,7 +5,6 @@ import LogoIcon from "../assets/Logo.png";
 
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   width: 90%;
-  //   background-color: ${(props) => props.theme.darkPurpleColor};
   background-color: none;
   border: 1px solid ${(props) => props.theme.EncaplyptusColor};
   display: flex;

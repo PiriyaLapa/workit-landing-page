@@ -1,6 +1,7 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
+import Navbar from './Navbar';
 
 const HeaderContainer = styled.div<{ theme: typeof theme }>`
   width: 100%;
@@ -9,10 +10,12 @@ const HeaderContainer = styled.div<{ theme: typeof theme }>`
   color: ${(props) => props.theme.WhiteColor};
 `;
 
+
 export default class Header extends Component {
   render(): ReactNode {
     return (
       <HeaderContainer theme={theme}>
+        <Navbar />
         <h1>HeaderContainer</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quae

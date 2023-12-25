@@ -6,7 +6,7 @@ import { theme } from "../utility";
 export default class LandingPage extends Component {
   render(): ReactNode {
     return (
-      <ContainerLandingPage theme={theme} $inputColor={theme.primaryColor}>
+      <ContainerLandingPage theme={theme} $inputColor={theme.primaryColor} $fontColor={theme.secondaryColor}>
           <p>test</p>
         <Header />
         {/* <Center />kk

@@ -1,5 +1,7 @@
 export const theme = {
-    primaryColor:'#24053E',
-    secondaryColor:'#44FFA1',
-    tertiaryColor:'#584D62'
-}
+    darkPurpleColor:'#24053E',
+    EncaplyptusColor:'#44FFA1',
+    DavysGreyColor:'#584D62',
+    WhiteColor:'#FFFFFF',
+    GhostWhiteColor:'#FCF8FF'
+};

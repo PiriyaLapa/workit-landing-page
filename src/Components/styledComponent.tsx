@@ -4,12 +4,11 @@ export const ContainerLandingPage = styled.div<{
   $inputColor?: string;
   $fontColor?: string;
 }>`
-  /* width: 1440px; */
   width: auto;
   height: auto;
   background-color: ${(props) =>
     props.$inputColor || props.theme.secondaryColor};
   margin: 0 auto;
-  color: ${(props) => props.$fontColor || "#ffff"};
-  text-align:center;
+  color: ${(props) => props.$fontColor || "red"};
+  text-align: center;
 `;

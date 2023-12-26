@@ -13,13 +13,13 @@ const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   padding: 10px;
 `;
 
-const StyledImgLogo = styled.img`
-  width: 5.985em;
-  height: 1.538em;
-`;
-interface ImgProps {
-  imgUrl: string;
-}
+// const StyledImgLogo = styled.img`
+//   width: 5.985em;
+//   height: 1.538em;
+// `;
+// interface ImgProps {
+//   imgUrl: string;
+// }
 
 // class ImageLogo extends Component<ImgProps> {
 //   render(): ReactNode {

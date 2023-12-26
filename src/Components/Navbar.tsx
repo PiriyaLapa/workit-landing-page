@@ -21,11 +21,11 @@ interface ImgProps {
   imgUrl: string;
 }
 
-class ImageLogo extends Component<ImgProps> {
-  render(): ReactNode {
-    return <StyledImgLogo src={this.props.imgUrl} />;
-  }
-}
+// class ImageLogo extends Component<ImgProps> {
+//   render(): ReactNode {
+//     return <StyledImgLogo src={this.props.imgUrl} />;
+//   }
+// }
 
 class Logo extends Component {
   render(): ReactNode {

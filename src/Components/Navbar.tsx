@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
-import LogoIcon from "../assets/Logo.png";
+// import LogoIcon from "../assets/Logo.png";
 
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   width: 90%;

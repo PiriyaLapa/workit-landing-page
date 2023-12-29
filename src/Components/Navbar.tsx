@@ -14,26 +14,16 @@ const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   padding: 10px;
 `;
 
-// const StyledImgLogo = styled.img`
-//   width: 5.985em;
-//   height: 1.538em;
-// `;
-// interface ImgProps {
-//   imgUrl: string;
-// }
-
-// class ImageLogo extends Component<ImgProps> {
-//   render(): ReactNode {
-//     return <StyledImgLogo src={this.props.imgUrl} />;
-//   }
-// }
+const ContainerLogo = styled.div`
+  border: 1px solid green;
+`
 
 class Logo extends Component {
   render(): ReactNode {
     return (
       <svg
         width="90"
-        height="24"
+        height="34"
         viewBox="0 0 97 26"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +43,10 @@ export default class Navbar extends Component {
   render(): ReactNode {
     return (
       <StyledNavbar theme={theme}>
-        <Logo />
-        <PrimaryBtn />
+        <ContainerLogo>
+          <Logo />
+        </ContainerLogo>
+        {/* <PrimaryBtn /> */}
         <SecondaryBtn />
       </StyledNavbar>
     );

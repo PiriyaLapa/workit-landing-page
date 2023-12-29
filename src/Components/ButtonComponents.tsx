@@ -21,9 +21,11 @@ const StylePrimaryBtn = styled.button<{theme: typeof theme}>`
 `;
 
 const StyleSecondary = styled(StylePrimaryBtn)`
+    background-color:${(props) => props.theme.darkPurpleColor};
     color:${(props) => props.theme.WhiteColor};
     border-bottom: 1px solid ${(props) => props.theme.EncaplyptusColor};
     &:hover {
+        border:none;
         color:${(props) => props.theme.EncaplyptusColor};
         transition:0.4s;
     }
@@ -37,7 +39,12 @@ export class PrimaryBtn extends Component{
     }
 }
 
-export class SecondayBtn extends Component{
+export class SecondaryBtn extends Component{
+    render():ReactNode{
+        return(
+            <StyleSecondary theme={theme}>apple for access</StyleSecondary>
+        )
+    }
 }
 
 

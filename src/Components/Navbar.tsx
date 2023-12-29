@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
-import { PrimaryBtn } from "./ButtonComponents";
+import { PrimaryBtn, SecondaryBtn } from "./ButtonComponents";
 // import LogoIcon from "../assets/Logo.png";
 
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
@@ -55,6 +55,7 @@ export default class Navbar extends Component {
       <StyledNavbar theme={theme}>
         <Logo />
         <PrimaryBtn />
+        <SecondaryBtn />
       </StyledNavbar>
     );
   }

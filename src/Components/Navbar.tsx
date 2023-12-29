@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
-import { PrimaryBtn, SecondaryBtn } from "./ButtonComponents";
+import { SecondaryBtn } from "./ButtonComponents";
 // import LogoIcon from "../assets/Logo.png";
 
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
@@ -16,7 +16,7 @@ const StyledNavbar = styled.nav<{ theme: typeof theme }>`
 
 const ContainerLogo = styled.div`
   border: 1px solid green;
-`
+`;
 
 class Logo extends Component {
   render(): ReactNode {

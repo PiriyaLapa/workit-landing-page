@@ -3,13 +3,30 @@ import styled from 'styled-components';
 import {theme} from '../utility';
 
 const StylePrimaryBtn = styled.button<{theme: typeof theme}>`
+    // default primary button
     // width:11.875em;
     height:3.813em;
     width:15%;
     background-color:${(props) => props.theme.EncaplyptusColor};
     text-transform:capitalize;
-    font-size:bold;
+    font-size:18px;
+    font-weight:700;
 
+    &:hover {
+        background-color:${(props) => props.theme.darkPurpleColor};
+        color:${(props) => props.theme.EncaplyptusColor};
+        border:1px solid ${(props) => props.theme.EncaplyptusColor};
+        transition:0.4s;
+    }
+`;
+
+const StyleSecondary = styled(StylePrimaryBtn)`
+    color:${(props) => props.theme.WhiteColor};
+    border-bottom: 1px solid ${(props) => props.theme.EncaplyptusColor};
+    &:hover {
+        color:${(props) => props.theme.EncaplyptusColor};
+        transition:0.4s;
+    }
 `;
 
 export class PrimaryBtn extends Component{
@@ -18,6 +35,9 @@ export class PrimaryBtn extends Component{
             <StylePrimaryBtn theme={theme}>apple for access</StylePrimaryBtn>
         )
     }
+}
+
+export class SecondayBtn extends Component{
 }
 
 

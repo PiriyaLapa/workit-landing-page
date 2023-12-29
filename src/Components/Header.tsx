@@ -2,19 +2,24 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
 import Navbar from './Navbar';
+import ImgContainer from '../assets/Rectangle.png';
 
-const HeaderContainer = styled.div<{ theme: typeof theme }>`
-  width: 100%;
+const HeaderContainer = styled.div<{ theme: typeof theme, urlImg:{ImgContainer:string}}>`
+  width:1440px;
   height: 730px;
-  background-color: ${(props) => props.theme.darkPurpleColor};
+  background-image : url(${(props) => props.urlImg.ImgContainer});
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
   color: ${(props) => props.theme.WhiteColor};
+  margin:0 auto;
 `;
 
 
 export default class Header extends Component {
   render(): ReactNode {
     return (
-      <HeaderContainer theme={theme}>
+      <HeaderContainer theme={theme} urlImg={{ImgContainer}}>
         <Navbar />
         <h1>HeaderContainer</h1>
         <p>

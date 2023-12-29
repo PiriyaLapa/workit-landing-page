@@ -3,14 +3,12 @@ import styled from "styled-components";
 import { theme } from "../utility";
 
 const StylePrimaryBtn = styled.button<{ theme: typeof theme }>`
-  // default primary button
-  // width:11.875em;
   height: 3.813em;
   width: 15%;
   background-color: ${(props) => props.theme.EncaplyptusColor};
   text-transform: capitalize;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
 
   &:hover {
     background-color: ${(props) => props.theme.darkPurpleColor};

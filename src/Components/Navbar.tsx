@@ -2,20 +2,20 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
 import { SecondaryBtn } from "./ButtonComponents";
-// import LogoIcon from "../assets/Logo.png";
 
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   width: 90%;
   background-color: none;
-  border: 1px solid ${(props) => props.theme.EncaplyptusColor};
+  // border: 1px solid ${(props) => props.theme.EncaplyptusColor};
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   padding: 10px;
+  align-items:center;
 `;
 
 const ContainerLogo = styled.div`
-  border: 1px solid green;
+  align-items:center
 `;
 
 class Logo extends Component {
@@ -46,7 +46,6 @@ export default class Navbar extends Component {
         <ContainerLogo>
           <Logo />
         </ContainerLogo>
-        {/* <PrimaryBtn /> */}
         <SecondaryBtn />
       </StyledNavbar>
     );

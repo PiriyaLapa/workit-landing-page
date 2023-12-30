@@ -14,7 +14,7 @@ const HeaderContainer = styled.div<{
   margin: 0 auto;
   clip-path: ${(props) => props.theme.HeaderShape};
   background-color: ${(props) => props.theme.darkPurpleColor};
-  z-index:2;
+  z-index:1;
 `;
 
 const InnerBox = styled.div`
@@ -47,7 +47,7 @@ export default class Header extends Component {
           <InnerBox>
             <TitleHeader>Data tailored to your deep.</TitleHeader>
             <PrimaryBtn />
-          <HeroImg urlImg={HeroImgSource} />
+          {/* <HeroImg urlImg={HeroImgSource} /> */}
           </InnerBox>
         </HeaderContainer>
     );

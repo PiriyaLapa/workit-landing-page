@@ -10,6 +10,7 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   background-color: ${(props) => props.theme.GhostWhiteColor};
   position:relative;
   top:-70px;
+  z-index:-1;
 `;
 
 export default class MiddleSection extends Component {

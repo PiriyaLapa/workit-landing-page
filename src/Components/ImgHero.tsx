@@ -6,10 +6,13 @@ interface ImgHeroProps{
 }
 
 const StyledHeroImg = styled.img`
-    width:45%;
+    width:39%;
     height:auto;
     display:block;
-    margin:0 auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,50%);
     
 `;
 

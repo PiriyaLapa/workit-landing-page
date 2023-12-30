@@ -44,11 +44,11 @@ export default class Header extends Component {
     return (
         <HeaderContainer theme={theme}>
           <Navbar />
-          <InnerBox>
+          {/* <InnerBox>
             <TitleHeader>Data tailored to your deep.</TitleHeader>
             <PrimaryBtn />
           <HeroImg urlImg={HeroImgSource} />
-          </InnerBox>
+          </InnerBox> */}
         </HeaderContainer>
     );
   }

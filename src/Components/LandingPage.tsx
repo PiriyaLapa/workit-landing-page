@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import { ContainerLandingPage } from "../Components/styledComponent";
 import Header from "./Header";
-// import MiddleSection from './MiddleSection';
+import MiddleSection from './MiddleSection';
 
 
 export default class LandingPage extends Component {
@@ -9,6 +9,7 @@ export default class LandingPage extends Component {
     return (
         <ContainerLandingPage>
           <Header />
+          <MiddleSection />
       </ContainerLandingPage>
     );
   }

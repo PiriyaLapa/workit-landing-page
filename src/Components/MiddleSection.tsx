@@ -1,26 +1,21 @@
-import  { Component,ReactNode } from "react";
-// import styled from 'styled-components';
+import { Component, ReactNode } from "react";
+import styled from "styled-components";
+import { theme } from "../utility";
 
+const MiddleContainer = styled.div<{ theme: typeof theme }>`
+  width: 1440px;
+  height: 730px;
+  margin: 0 auto;
+  clip-path: ${(props) => props.theme.HeaderShape};
+  background-color: ${(props) => props.theme.GhostWhiteColor};
+`;
 
 export default class MiddleSection extends Component {
-  render():ReactNode {
+  render(): ReactNode {
     return (
-      <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1440"
-          height="960"
-          viewBox="0 0 1440 960"
-          fill="none"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0 0H1440V892C1440 892 1082.96 960 722 960C361.039 960 0 892 0 892V0Z"
-            fill="#FCF8FF"
-          />
-        </svg>
-      </div>
+      <MiddleContainer theme={theme}>
+        <h1>Hello Middle section</h1>
+      </MiddleContainer>
     );
   }
 }

@@ -9,26 +9,21 @@ import { PrimaryBtn } from "./ButtonComponents";
 
 const HeaderContainer = styled.div<{
   theme: typeof theme;
-  urlImg: { ImgContainer: string };
 }>`
   width: 1440px;
   height: 730px;
-  background-image: url(${(props) => props.urlImg.ImgContainer});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: ${(props) => props.theme.WhiteColor};
   margin: 0 auto;
+  clip-path: ${(props) => props.theme.HeaderShape}; 
+  background-color:${(props) => props.theme.darkPurpleColor};
 `;
 
 const InnerBox = styled.div`
   display: block;
   align-items: center;
+  position: relative;
+  top: -750px;
   * {
     margin: 0 auto;
-  }
-  :nth-child(2){
-    margin: 80px 0;
   }
 `;
 
@@ -42,19 +37,17 @@ const TitleHeader = styled.span`
   text-align: center;
   display: block;
   margin-top: 50px;
+  color: white;
+  margin: 50px auto;
 `;
 
 export default class Header extends Component {
   render(): ReactNode {
-    return (
-      <HeaderContainer theme={theme} urlImg={{ ImgContainer }}>
-        <Navbar />
-        <InnerBox>
-          <TitleHeader>Data tailored to your need.</TitleHeader>
-          <PrimaryBtn />
-          <HeroImg urlImg={HeroImgSource} />
-        </InnerBox>
-      </HeaderContainer>
-    );
+    return <HeaderContainer theme={theme}>
+      <Navbar />
+      <TitleHeader>Data tailored to your deep.</TitleHeader>
+      <PrimaryBtn />
+      <HeroImg urlImg={HeroImgSource} />
+    </HeaderContainer>;
   }
 }

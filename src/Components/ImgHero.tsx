@@ -10,6 +10,7 @@ const StyledHeroImg = styled.img`
     height:auto;
     display:block;
     margin:0 auto;
+    
 `;
 
 export class HeroImg extends Component<ImgHeroProps>{

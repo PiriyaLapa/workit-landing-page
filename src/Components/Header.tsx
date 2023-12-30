@@ -13,17 +13,15 @@ const HeaderContainer = styled.div<{
   width: 1440px;
   height: 730px;
   margin: 0 auto;
-  clip-path: ${(props) => props.theme.HeaderShape}; 
-  background-color:${(props) => props.theme.darkPurpleColor};
+  clip-path: ${(props) => props.theme.HeaderShape};
+  background-color: ${(props) => props.theme.darkPurpleColor};
 `;
 
 const InnerBox = styled.div`
   display: block;
   align-items: center;
-  position: relative;
-  top: -750px;
   * {
-    margin: 0 auto;
+    margin: 38px auto;
   }
 `;
 
@@ -43,11 +41,15 @@ const TitleHeader = styled.span`
 
 export default class Header extends Component {
   render(): ReactNode {
-    return <HeaderContainer theme={theme}>
-      <Navbar />
-      <TitleHeader>Data tailored to your deep.</TitleHeader>
-      <PrimaryBtn />
-      <HeroImg urlImg={HeroImgSource} />
-    </HeaderContainer>;
+    return (
+        <HeaderContainer theme={theme}>
+          <Navbar />
+          <InnerBox>
+            <TitleHeader>Data tailored to your deep.</TitleHeader>
+            <PrimaryBtn />
+          <HeroImg urlImg={HeroImgSource} />
+          </InnerBox>
+        </HeaderContainer>
+    );
   }
 }

@@ -2,8 +2,6 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
 import Navbar from "./Navbar";
-// import HeroImgSource from "../assets/moblie.png";
-// import { HeroImg } from "./ImgHero";
 import { PrimaryBtn } from "./ButtonComponents";
 
 const HeaderContainer = styled.div<{

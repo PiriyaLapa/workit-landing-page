@@ -2,7 +2,7 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
 import Navbar from "./Navbar";
-import ImgContainer from "../assets/Rectangle.png";
+// import ImgContainer from "../assets/Rectangle.png";
 import HeroImgSource from "../assets/moblie.png";
 import { HeroImg } from "./ImgHero";
 import { PrimaryBtn } from "./ButtonComponents";

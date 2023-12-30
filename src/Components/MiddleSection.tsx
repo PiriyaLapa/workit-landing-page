@@ -9,8 +9,7 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   clip-path: ${(props) => props.theme.HeaderShape};
   background-color: ${(props) => props.theme.GhostWhiteColor};
   position:relative;
-  top:-80px;
-
+  top:-70px;
 `;
 
 export default class MiddleSection extends Component {

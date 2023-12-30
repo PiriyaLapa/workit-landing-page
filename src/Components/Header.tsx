@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { theme } from "../utility";
 import Navbar from "./Navbar";
 import ImgContainer from "../assets/Rectangle.png";
-import HeroImgSource from '../assets/moblie.png';
+import HeroImgSource from "../assets/moblie.png";
 import { HeroImg } from "./ImgHero";
+import { PrimaryBtn } from "./ButtonComponents";
 
 const HeaderContainer = styled.div<{
   theme: typeof theme;
@@ -21,11 +22,21 @@ const HeaderContainer = styled.div<{
 `;
 
 const InnerBox = styled.div`
-  border: 1px solid red;
-  display: flex;
+  display: block;
   align-items: center;
 `;
 
+const TitleHeader = styled.span`
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  font-family: "Fraunces 144pt";
+  font-size: 80px;
+  font-weight: 100;
+  line-height: 80px;
+  text-align: center;
+  display: block;
+`;
 
 export default class Header extends Component {
   render(): ReactNode {
@@ -33,14 +44,9 @@ export default class Header extends Component {
       <HeaderContainer theme={theme} urlImg={{ ImgContainer }}>
         <Navbar />
         <InnerBox>
-        <h1>HeaderContainer</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quae
-          eius harum consectetur alias. Ullam impedit iusto quidem nemo
-          deserunt.
-        </p>
-        {/* <HeroImg urlHero={HeroImgSource} /> */}
-      <HeroImg urlImg={HeroImgSource} />
+          <TitleHeader>Data tailored to your need</TitleHeader>
+          <PrimaryBtn />
+          <HeroImg urlImg={HeroImgSource} />
         </InnerBox>
       </HeaderContainer>
     );

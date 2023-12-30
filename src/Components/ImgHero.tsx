@@ -6,8 +6,10 @@ interface ImgHeroProps{
 }
 
 const StyledHeroImg = styled.img`
-    width:100%;
+    width:45%;
     height:auto;
+    display:block;
+    margin:0 auto;
 `;
 
 export class HeroImg extends Component<ImgHeroProps>{

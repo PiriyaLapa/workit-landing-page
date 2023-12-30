@@ -14,7 +14,7 @@ const StylePrimaryBtn = styled.button<{ theme: typeof theme }>`
     background-color: ${(props) => props.theme.darkPurpleColor};
     color: ${(props) => props.theme.EncaplyptusColor};
     border: 1px solid ${(props) => props.theme.EncaplyptusColor};
-    transition: 0.4s;
+    transition: 0.5s;
   }
 `;
 

@@ -6,7 +6,6 @@ import { SecondaryBtn } from "./ButtonComponents";
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   width: 90%;
   background-color: none;
-  // border: 1px solid ${(props) => props.theme.EncaplyptusColor};
   display: flex;
   margin: 0 auto;
   justify-content: space-between;

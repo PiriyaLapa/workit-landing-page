@@ -4,6 +4,7 @@ import { theme } from "../utility";
 import Navbar from "./Navbar";
 import ImgContainer from "../assets/Rectangle.png";
 import HeroImgSource from '../assets/moblie.png';
+import { HeroImg } from "./ImgHero";
 
 const HeaderContainer = styled.div<{
   theme: typeof theme;
@@ -25,22 +26,6 @@ const InnerBox = styled.div`
   align-items: center;
 `;
 
-interface ImgHeroProps {
-  urlHero:string;
-}
-
-const StyleHeroImg = styled.img`
-  width:100%;
-  height:auto;
-`;
-
-class HeroImg extends Component<ImgHeroProps>{
-  render():ReactNode{
-    return(
-      <StyleHeroImg src={this.props.urlHero} alt="HeroImg" />
-    )
-  }
-}
 
 export default class Header extends Component {
   render(): ReactNode {
@@ -54,7 +39,8 @@ export default class Header extends Component {
           eius harum consectetur alias. Ullam impedit iusto quidem nemo
           deserunt.
         </p>
-        <HeroImg urlHero={HeroImgSource} />
+        {/* <HeroImg urlHero={HeroImgSource} /> */}
+      <HeroImg urlImg={HeroImgSource} />
         </InnerBox>
       </HeaderContainer>
     );

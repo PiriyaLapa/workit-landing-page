@@ -12,12 +12,22 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   top:-70px;
   z-index:-1;
 `;
+const MiddleInnerBox = styled.div`
+  border:1px solid green;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+`
 
 export default class MiddleSection extends Component {
   render(): ReactNode {
     return (
       <MiddleContainer theme={theme} >
-        <h1>Hello Middle section</h1>
+        <MiddleInnerBox>
+          <h1>Hellor test</h1>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut officia cupiditate facere sed quae. Enim.</p>
+        </MiddleInnerBox>
       </MiddleContainer>
     );
   }

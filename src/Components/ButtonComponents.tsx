@@ -6,9 +6,8 @@ const StylePrimaryBtn = styled.button<{ theme: typeof theme }>`
   height: 3.813em;
   width: 15%;
   background-color: ${(props) => props.theme.EncaplyptusColor};
-  text-transform: capitalize;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 19px;
+  font-weight: 800;
 
   &:hover {
     background-color: ${(props) => props.theme.darkPurpleColor};
@@ -26,6 +25,8 @@ const StyleSecondary = styled(StylePrimaryBtn)`
     width:auto;
     height:43px;
     margin-right:10px;
+    font-size:18px;
+    font-weight:400;
     &:hover {
         border:none;
         color:${(props) => props.theme.EncaplyptusColor};
@@ -35,12 +36,12 @@ const StyleSecondary = styled(StylePrimaryBtn)`
 
 export class PrimaryBtn extends Component {
   render(): ReactNode {
-    return <StylePrimaryBtn theme={theme}>apply for access</StylePrimaryBtn>;
+    return <StylePrimaryBtn theme={theme}>Learn more</StylePrimaryBtn>;
   }
 }
 
 export class SecondaryBtn extends Component {
   render(): ReactNode {
-    return <StyleSecondary theme={theme}>apply for access</StyleSecondary>;
+    return <StyleSecondary theme={theme}>Apply for access</StyleSecondary>;
   }
 }

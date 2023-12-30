@@ -24,10 +24,15 @@ const HeaderContainer = styled.div<{
 const InnerBox = styled.div`
   display: block;
   align-items: center;
+  * {
+    margin: 0 auto;
+  }
+  :nth-child(2){
+    margin: 80px 0;
+  }
 `;
 
 const TitleHeader = styled.span`
-  margin: 0 auto;
   width: 40%;
   height: auto;
   font-family: "Fraunces 144pt";
@@ -36,6 +41,7 @@ const TitleHeader = styled.span`
   line-height: 80px;
   text-align: center;
   display: block;
+  margin-top: 50px;
 `;
 
 export default class Header extends Component {
@@ -44,7 +50,7 @@ export default class Header extends Component {
       <HeaderContainer theme={theme} urlImg={{ ImgContainer }}>
         <Navbar />
         <InnerBox>
-          <TitleHeader>Data tailored to your need</TitleHeader>
+          <TitleHeader>Data tailored to your need.</TitleHeader>
           <PrimaryBtn />
           <HeroImg urlImg={HeroImgSource} />
         </InnerBox>

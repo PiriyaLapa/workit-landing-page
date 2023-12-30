@@ -8,12 +8,15 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   margin: 0 auto;
   clip-path: ${(props) => props.theme.HeaderShape};
   background-color: ${(props) => props.theme.GhostWhiteColor};
+  position:relative;
+  top:-80px;
+
 `;
 
 export default class MiddleSection extends Component {
   render(): ReactNode {
     return (
-      <MiddleContainer theme={theme}>
+      <MiddleContainer theme={theme} >
         <h1>Hello Middle section</h1>
       </MiddleContainer>
     );

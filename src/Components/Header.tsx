@@ -14,6 +14,7 @@ const HeaderContainer = styled.div<{
   margin: 0 auto;
   clip-path: ${(props) => props.theme.HeaderShape};
   background-color: ${(props) => props.theme.darkPurpleColor};
+  z-index:2;
 `;
 
 const InnerBox = styled.div`
@@ -41,7 +42,7 @@ const TitleHeader = styled.span`
 export default class Header extends Component {
   render(): ReactNode {
     return (
-        <HeaderContainer theme={theme}>
+        <HeaderContainer theme={theme} style={{zIndex:2}}>
           <Navbar />
           <InnerBox>
             <TitleHeader>Data tailored to your deep.</TitleHeader>

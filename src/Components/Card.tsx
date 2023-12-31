@@ -1,11 +1,12 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
+import { DATAItem } from "../utility";
 
-interface CardProps {
-  id?: number;
-  title: string;
-  content: string;
+
+interface CardProps{
+    items:DATAItem[]
 }
+
 const CardWrapper = styled.div`
   border: 1px solid green;
   margin: 10px;
@@ -15,12 +16,16 @@ const CardWrapper = styled.div`
 `;
 
 export default class Card extends Component<CardProps> {
+  constructor(props: CardProps){
+    super(props);
+  }
   render(): ReactNode {
-    const {  title, content } = this.props;
+    const {items} = this.props
     return (
       <CardWrapper>
-        <h1>{title}</h1>
-        <p>{content}</p>
+        {items.map((item,index) => (
+            <h1>{item.id}</h1>
+        ))}
       </CardWrapper>
     );
   }

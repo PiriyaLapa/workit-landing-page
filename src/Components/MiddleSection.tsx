@@ -1,6 +1,6 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-import { theme,data} from "../utility";
+import { theme} from "../utility";
 import Card from "./Card";
 
 const MiddleContainer = styled.div<{ theme: typeof theme }>`
@@ -27,9 +27,6 @@ export default class MiddleSection extends Component {
     return (
       <MiddleContainer theme={theme}>
         <MiddleInnerBox>
-          {data.map((card,index) => (
-            <Card key={index} {...card} />
-          ))}
           <h1>Hi there!</h1>
         </MiddleInnerBox>
       </MiddleContainer>

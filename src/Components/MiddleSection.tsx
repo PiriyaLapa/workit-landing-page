@@ -1,6 +1,7 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-import { theme } from "../utility";
+import { theme, data } from "../utility";
+import Card from "./Card";
 
 const MiddleContainer = styled.div<{ theme: typeof theme }>`
   width: 1440px;
@@ -8,25 +9,27 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   margin: 0 auto;
   clip-path: ${(props) => props.theme.HeaderShape};
   background-color: ${(props) => props.theme.GhostWhiteColor};
-  position:relative;
-  top:-70px;
-  z-index:-1;
+  position: relative;
+  top: -70px;
+  z-index: -1;
 `;
 const MiddleInnerBox = styled.div`
-  border:1px solid green;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-`
+  display:flex;
+  border: 1px solid green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 export default class MiddleSection extends Component {
   render(): ReactNode {
     return (
-      <MiddleContainer theme={theme} >
+      <MiddleContainer theme={theme}>
         <MiddleInnerBox>
-          <h1>Hellor test</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut officia cupiditate facere sed quae. Enim.</p>
+          {data.map((card) => (
+            <Card key={card.id} {...card} />
+          ))}
         </MiddleInnerBox>
       </MiddleContainer>
     );

@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import { ContainerLandingPage } from "../Components/styledComponent";
 import Header from "./Header";
-// import MiddleSection from "./MiddleSection";
+import MiddleSection from "./MiddleSection";
 import { HeroImg } from "./ImgHero";
 import HeroImgSource from "../assets/moblie.png";
 
@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
       <ContainerLandingPage>
         <Header />
         <HeroImg urlImg={HeroImgSource} />
-        {/* <MiddleSection /> */}
+        <MiddleSection />
       </ContainerLandingPage>
     );
   }

@@ -30,6 +30,7 @@ export default class MiddleSection extends Component {
           {/* {data.map((card) => (
             <Card key={card.id} {...card} />
           ))} */}
+          <h1>Hi there!</h1>
         </MiddleInnerBox>
       </MiddleContainer>
     );

@@ -27,9 +27,9 @@ export default class MiddleSection extends Component {
     return (
       <MiddleContainer theme={theme}>
         <MiddleInnerBox>
-          {data.map((card) => (
+          {/* {data.map((card) => (
             <Card key={card.id} {...card} />
-          ))}
+          ))} */}
         </MiddleInnerBox>
       </MiddleContainer>
     );

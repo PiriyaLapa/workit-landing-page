@@ -18,6 +18,8 @@ export default class Card extends Component<CardProps> {
         {Data.map((data, index) => (
           <div key={index}>
           <h1>{data.id}</h1>
+          <h2>{data.title}</h2>
+          <p>{data.content}</p>
           </div>
         ))}
       </div>

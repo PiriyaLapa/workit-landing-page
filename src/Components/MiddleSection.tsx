@@ -1,8 +1,8 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme} from "../utility";
-// import Card from "./Card";
-// import { ContentData } from "../Data/Data";
+import Card from "./Card";
+import { ContentData } from "../Data/Data";
 
 const MiddleContainer = styled.div<{ theme: typeof theme }>`
   width: 1440px;
@@ -12,7 +12,7 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   background-color: ${(props) => props.theme.GhostWhiteColor};
   position: relative;
   top: -70px;
-  z-index: -1;
+  // z-index: -1;
 `;
 const MiddleInnerBox = styled.div`
   display:flex;
@@ -28,8 +28,7 @@ export default class MiddleSection extends Component {
     return (
       <MiddleContainer theme={theme}>
         <MiddleInnerBox>
-          <h1>Hi there!</h1>
-          {/* <Card Data={ContentData} /> */}
+          <Card Data={ContentData} />
         </MiddleInnerBox>
       </MiddleContainer>
     );

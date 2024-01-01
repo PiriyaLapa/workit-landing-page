@@ -6,9 +6,9 @@ interface CardProps {
 }
 
 export default class Card extends Component<CardProps> {
-  constructor(props:CardProps){
-    super(props);
-  }
+  // constructor(props:CardProps){
+  //   super(props);
+  // }
 
   render(): ReactNode {
     const { Data } = this.props;

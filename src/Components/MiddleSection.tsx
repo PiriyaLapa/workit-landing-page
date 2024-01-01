@@ -28,8 +28,8 @@ export default class MiddleSection extends Component {
     return (
       <MiddleContainer theme={theme}>
         <MiddleInnerBox>
-        </MiddleInnerBox>
           <Card Data={ContentData} />
+        </MiddleInnerBox>
       </MiddleContainer>
     );
   }

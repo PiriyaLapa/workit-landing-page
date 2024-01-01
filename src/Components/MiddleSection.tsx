@@ -2,6 +2,7 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme} from "../utility";
 import Card from "./Card";
+import { ContentData } from "../Data/Data";
 
 const MiddleContainer = styled.div<{ theme: typeof theme }>`
   width: 1440px;
@@ -28,6 +29,7 @@ export default class MiddleSection extends Component {
       <MiddleContainer theme={theme}>
         <MiddleInnerBox>
           <h1>Hi there!</h1>
+          <Card Data={ContentData} />
         </MiddleInnerBox>
       </MiddleContainer>
     );

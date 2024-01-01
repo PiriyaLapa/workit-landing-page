@@ -1,32 +1,26 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-import { DATAItem } from "../utility";
+import { CARDData } from "../Data/Data";
 
-
-interface CardProps{
-    items:DATAItem[]
+interface CardProps {
+  Data: CARDData[];
 }
 
-const CardWrapper = styled.div`
-  border: 1px solid green;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-`;
-
 export default class Card extends Component<CardProps> {
-  constructor(props: CardProps){
+  constructor(props:CardProps){
     super(props);
   }
+
   render(): ReactNode {
-    const {items} = this.props
+    const { Data } = this.props;
     return (
-      <CardWrapper>
-        {items.map((item,index) => (
-            <h1>{item.id}</h1>
+      <div>
+        {Data.map((data, index) => (
+          <div key={index}>
+          <h1>{data.id}</h1>
+          </div>
         ))}
-      </CardWrapper>
+      </div>
     );
   }
 }

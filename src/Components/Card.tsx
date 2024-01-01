@@ -1,5 +1,5 @@
 import { Component, ReactNode } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { CARDData } from "../Data/Data";
 
 interface CardProps {

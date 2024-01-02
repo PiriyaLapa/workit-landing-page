@@ -11,7 +11,7 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   font-family: ${(props) => props.fonts.PrimaryFont};
   font-size: 1.2em;
   font-style: normal;
-  font-weigth: 600;
+  font-weight:600;
   color: ${(props) => props.theme.darkPurpleColor};
   text-align: center;
   margin: 5px auto;
@@ -23,9 +23,9 @@ const CardContainer = styled.div`
   display: flex;
 `;
 
-// const ContentCard = styled.p<{}>`
-
-// `;
+const ContentCard = styled.p<{fonts:typeof fonts}>`
+  color:green;
+`;
 
 interface CardProps {
   Data: CARDData[];
@@ -44,7 +44,7 @@ export default class Card extends Component<CardProps> {
             <TitleCard shape={shape} fonts={fonts}>
               {data.title}
             </TitleCard>
-            <p>{data.content}</p>
+            <ContentCard fonts={fonts}>{data.content}</ContentCard>
           </div>
         ))}
       </CardContainer>

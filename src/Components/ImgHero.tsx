@@ -13,6 +13,11 @@ const StyledHeroImg = styled.img`
     top:50%;
     left:50%;
     transform:translate(-50%,50%);
+
+    @media only screen and (min-width:1669px){
+        width:36%;
+        top:32%;
+    } 
 `;
 
 export class HeroImg extends Component<ImgHeroProps>{

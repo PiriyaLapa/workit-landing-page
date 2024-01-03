@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import { CARDData } from "../Data/Data";
 import styled from "styled-components";
-import { shape, fonts } from "../utility";
+import { shape, fonts, theme } from "../utility";
 
 const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   width: 36px;
@@ -14,7 +14,7 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   font-weight:600;
   color: ${(props) => props.theme.darkPurpleColor};
   text-align: center;
-  margin: 5px auto;
+  margin: 80px auto;
 `;
 
 const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>`
@@ -23,18 +23,17 @@ const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>`
 
 const CardContainer = styled.div`
   display: flex;
+  justify-content:space-between;
 `;
 
 const ContentCard = styled.p<{fonts:typeof fonts}>`
-  color:green;
   font-family: ${(props) => props.fonts.SecondaryFont};
-  margin: 0 20px;
-  border: 1px solid green;
+  margin: 20px 13px;
 `;
-const CardWrap = styled.div`
-  border:1px solid green; 
-  margin-right: 30px;
-`
+
+const CardWrap = styled.div<{theme:typeof theme}>`
+  color:${(props) => props.theme.darkPurpleColor};
+`;
 
 interface CardProps {
   Data: CARDData[];
@@ -46,7 +45,7 @@ export default class Card extends Component<CardProps> {
     return (
       <CardContainer>
         {Data.map((data, index) => (
-          <CardWrap key={index}>
+          <CardWrap key={index} theme={theme}>
             <CircleShape shape={shape} fonts={fonts}>
               <h2>{data.id}</h2>
             </CircleShape>

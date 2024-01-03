@@ -15,8 +15,9 @@ const MiddleContainer = styled.div<{ theme: typeof theme }>`
   z-index: -1;
 `;
 const MiddleInnerBox = styled.div`
+  width:1114px;
+  height:auto;
   display:flex;
-  border: 1px solid green;
   position: absolute;
   top: 50%;
   left: 50%;

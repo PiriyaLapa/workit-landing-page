@@ -24,13 +24,15 @@ const HeaderContainer = styled.div<{
   urlImg: { ImgContainer: string };
 }>`
   width: 100%;
-  height: auto;
+  // height: auto;
+  height:1000px;
   background-image: url(${(props) => props.urlImg.ImgContainer});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: ${(props) => props.theme.WhiteColor};
   margin: 0 auto;
+  background-color:${(props) => props.theme.GhostWhiteColor};
 `;
 
 const InnerBox = styled.div`
@@ -42,7 +44,7 @@ const InnerBox = styled.div`
 `;
 
 const TitleHeader = styled.span`
-  width: 40%;
+  width: 30%;
   height: auto;
   font-family: "Fraunces 144pt";
   font-size: 80px;
@@ -50,9 +52,8 @@ const TitleHeader = styled.span`
   line-height: 80px;
   text-align: center;
   display: block;
-  margin-top: 50px;
   color: white;
-  margin: 50px auto;
+  margin:120px auto 100px auto;
 `;
 
 export default class Header extends Component {

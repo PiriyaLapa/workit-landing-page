@@ -23,7 +23,7 @@ const MiddleContainer = styled.div<{ theme: typeof theme; urlImg: {ImgMiddleCont
   
 `;
 const MiddleInnerBox = styled.div`
-  width:1114px;
+  width:80%;
   height:auto;
   display:flex;
   position: absolute;

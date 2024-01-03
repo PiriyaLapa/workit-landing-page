@@ -33,8 +33,6 @@ const ContentCard = styled.p<{ fonts: typeof fonts }>`
 
 const CardWrap = styled.div<{ theme: typeof theme }>`
   color: ${(props) => props.theme.darkPurpleColor};
-  border:1px solid red;
-  position:relative;
 `;
 
 interface CardProps {

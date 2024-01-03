@@ -17,7 +17,9 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   margin: 5px auto;
 `;
 
-const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>``;
+const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>`
+  margin: 30px 0;
+`;
 
 const CardContainer = styled.div`
   display: flex;
@@ -25,7 +27,14 @@ const CardContainer = styled.div`
 
 const ContentCard = styled.p<{fonts:typeof fonts}>`
   color:green;
+  font-family: ${(props) => props.fonts.SecondaryFont};
+  margin: 0 20px;
+  border: 1px solid green;
 `;
+const CardWrap = styled.div`
+  border:1px solid green; 
+  margin-right: 30px;
+`
 
 interface CardProps {
   Data: CARDData[];
@@ -37,7 +46,7 @@ export default class Card extends Component<CardProps> {
     return (
       <CardContainer>
         {Data.map((data, index) => (
-          <div key={index}>
+          <CardWrap key={index}>
             <CircleShape shape={shape} fonts={fonts}>
               <h2>{data.id}</h2>
             </CircleShape>
@@ -45,7 +54,7 @@ export default class Card extends Component<CardProps> {
               {data.title}
             </TitleCard>
             <ContentCard fonts={fonts}>{data.content}</ContentCard>
-          </div>
+          </CardWrap>
         ))}
       </CardContainer>
     );

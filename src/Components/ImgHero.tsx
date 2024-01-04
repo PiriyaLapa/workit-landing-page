@@ -9,7 +9,6 @@ const StyledHeroImg = styled.img`
     width:39%;
     height:auto;
     display:block;
-    // position:absolute;
     position:relative;
     top:50%;
     left:50%;

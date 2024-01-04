@@ -5,8 +5,9 @@ import Navbar from "./Navbar";
 import { PrimaryBtn } from "./ButtonComponents";
 import ImgContainer from "../assets/Rectangle.png";
 import { HeroImg } from "./ImgHero";
-import  HeroImgSource  from "../assets/moblie.png";
-
+import HeroImgSource from "../assets/moblie.png";
+import BigSpringImg from "../assets/BigString.png";
+import SmallPringImg from '../assets/SmallSpring.png';
 // const HeaderContainer = styled.div<{
 //   theme: typeof theme;
 // }>`
@@ -25,14 +26,14 @@ const HeaderContainer = styled.div<{
 }>`
   width: 100%;
   // height: auto;
-  height:1000px;
+  height: 1000px;
   background-image: url(${(props) => props.urlImg.ImgContainer});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: ${(props) => props.theme.WhiteColor};
   margin: 0 auto;
-  background-color:${(props) => props.theme.GhostWhiteColor};
+  background-color: ${(props) => props.theme.GhostWhiteColor};
 `;
 
 const InnerBox = styled.div`
@@ -53,8 +54,38 @@ const TitleHeader = styled.span`
   text-align: center;
   display: block;
   color: white;
-  margin:120px auto 100px auto;
+  margin: 120px auto 100px auto;
 `;
+// BigSpring component
+
+interface SpringProps {
+  urlImg: string;
+}
+const StyleSpring = styled.img`
+  position: absolute;
+  top: 40%;
+  left: -1px;
+`;
+
+const StyledSmallSpring = styled(StyleSpring)`
+  top:45%;
+  left:89%;
+`;
+  
+class BigSpring extends Component<SpringProps> {
+  render(): ReactNode {
+    return <StyleSpring src={this.props.urlImg} alt="springImg" />;
+  }
+}
+
+class SmallSpring extends Component<SpringProps>{
+  render():ReactNode{
+    return(
+    <StyledSmallSpring src={this.props.urlImg} alt="small spring" />
+    )
+  }
+} 
+
 
 export default class Header extends Component {
   render(): ReactNode {
@@ -67,6 +98,8 @@ export default class Header extends Component {
           <PrimaryBtn />
           <HeroImg urlImg={HeroImgSource} />
         </InnerBox>
+        <BigSpring urlImg={BigSpringImg} />
+        <SmallSpring urlImg={SmallPringImg} />
       </HeaderContainer>
     );
   }

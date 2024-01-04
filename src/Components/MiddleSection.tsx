@@ -9,7 +9,7 @@ import ImgMiddleContainer from '../assets/MiddleContainer.png';
 const MiddleContainer = styled.div<{ theme: typeof theme; urlImg: {ImgMiddleContainer:string}}>`
   /* width: 1440px; */
   width:100%;
-  height: 1000px;
+  height: 1300px;
   margin: 0 auto;
   /* clip-path: ${(props) => props.theme.HeaderShape}; */
   /* background-color: ${(props) => props.theme.GhostWhiteColor}; */

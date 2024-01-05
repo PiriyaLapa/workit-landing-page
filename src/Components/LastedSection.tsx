@@ -19,7 +19,7 @@ interface urlImgProps{
 class Profile extends Component<urlImgProps>{
     render():ReactNode{
         return(
-            <StyleProfile src={this.props.urlImg} alt="ProfileImg" / >
+            <StyleProfile src={this.props.urlImg} alt="ProfileImg" />
         )
     }
 }

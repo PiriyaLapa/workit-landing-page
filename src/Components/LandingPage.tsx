@@ -13,7 +13,7 @@ export default class LandingPage extends Component {
         <Header />
         {/* <HeroImg urlImg={HeroImgSource} /> */}
         <MiddleSection />
-        <LastedSection />
+        {/* <LastedSection /> */}
       </ContainerLandingPage>
     );
   }

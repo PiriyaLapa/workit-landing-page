@@ -95,7 +95,7 @@ export default class Header extends Component {
         <Navbar />
         <InnerBox>
           <TitleHeader>Data tailored to your deep.</TitleHeader>
-          <PrimaryBtn />
+          <PrimaryBtn message="Learn more" />
           <HeroImg urlImg={HeroImgSource} />
         </InnerBox>
         <BigSpring urlImg={BigSpringImg} />

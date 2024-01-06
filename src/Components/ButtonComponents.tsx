@@ -33,15 +33,19 @@ const StyleSecondary = styled(StylePrimaryBtn)`
         border-bottom: 3px solid ${(props) => props.theme.EncaplyptusColor}
     }
 `;
+interface MessageProps{
+  message:string;
+}
 
-export class PrimaryBtn extends Component {
+export class PrimaryBtn extends Component<MessageProps> {
   render(): ReactNode {
-    return <StylePrimaryBtn theme={theme}>Learn more</StylePrimaryBtn>;
+    return <StylePrimaryBtn theme={theme}>{this.props.message}</StylePrimaryBtn>;
   }
 }
 
-export class SecondaryBtn extends Component {
+
+export class SecondaryBtn extends Component<MessageProps>{
   render(): ReactNode {
-    return <StyleSecondary theme={theme}>Apply for access</StyleSecondary>;
+    return <StyleSecondary theme={theme}>{this.props.message}</StyleSecondary>;
   }
 }

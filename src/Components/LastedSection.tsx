@@ -27,7 +27,7 @@ class Profile extends Component<urlImgProps> {
 
 const InnerBox = styled.div`
   width: 1112px;
-  height: 674.64;
+  height: 674.74px;
   margin: 0 auto;
 `;
 
@@ -37,14 +37,31 @@ const StyleCardContent = styled.div<{
 }>`
   background-color: ${(props) => props.theme.darkPurpleColor};
   color: ${(props) => props.theme.WhiteColor};
+  width: 55%;
+  height:auto;
+  float: right;
+  text-align: left;
+  padding:5%;
+  * {
+   margin: 0.3em 0;
+  }
+  :nth-child(3) {
+    width:40%;
+    margin-top: 8%;
+    float: left;
+  }
 `;
 
 const TitleCard = styled.h1<{ fonts: typeof fonts }>`
   font-family: ${(props) => props.fonts.PrimaryFont};
+  float: left;
+  display: block;
 `;
 
 const Content = styled.p<{ fonts: typeof fonts }>`
   font-family: ${(props) => props.fonts.SecondaryFont};
+  display: block;
+  float: left;
 `;
 
 class CardContent extends Component {
@@ -58,7 +75,7 @@ class CardContent extends Component {
           company. Apply for access below and I’ll be in touch to schedule a
           call.
         </Content>
-        <PrimaryBtn />
+        <PrimaryBtn message="Apple for accesse" />
       </StyleCardContent>
     );
   }

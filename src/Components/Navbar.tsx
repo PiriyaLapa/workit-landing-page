@@ -14,7 +14,7 @@ const StyledNavbar = styled.nav<{ theme: typeof theme }>`
 `;
 
 const ContainerLogo = styled.div`
-  align-items:center
+  align-items:center;
 `;
 
 class Logo extends Component {
@@ -45,7 +45,7 @@ export default class Navbar extends Component {
         <ContainerLogo>
           <Logo />
         </ContainerLogo>
-        <SecondaryBtn />
+        <SecondaryBtn message="Apply for access" />
       </StyledNavbar>
     );
   }

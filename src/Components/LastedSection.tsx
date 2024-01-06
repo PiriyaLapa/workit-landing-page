@@ -79,7 +79,7 @@ class CardContent extends Component<{
 }> {
   render(): ReactNode {
     const { title, content } = this.props.data;
-    const { btnNavMgs, btnHeadMgs } = this.props.btnMsg;
+    const { btnNavMgs } = this.props.btnMsg;
     return (
       <StyleCardContent theme={theme} fonts={fonts}>
         {/* <TitleCard fonts={fonts}>Be the first to be test</TitleCard> */}

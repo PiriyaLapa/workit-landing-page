@@ -16,3 +16,13 @@ export const fonts = {
     PrimaryFont:'"Fraunces 144pt"',
     SecondaryFont:'"Manrope"'
 }
+
+export const contentCard = {
+    title:'Be the first to be test',
+    content:"Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a beta tester for our app and kickstart your company. Apply for access below and I’ll be in touch to schedule a call."
+}
+
+export const btnMessage = {
+    btnNavMgs:'Apply for access',
+    btnHeadMgs:'Learn more',
+}

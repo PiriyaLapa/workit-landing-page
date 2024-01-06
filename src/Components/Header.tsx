@@ -56,7 +56,6 @@ const TitleHeader = styled.span`
   color: white;
   margin: 120px auto 100px auto;
 `;
-// BigSpring component
 
 interface SpringProps {
   urlImg: string;
@@ -90,7 +89,6 @@ class SmallSpring extends Component<SpringProps>{
 export default class Header extends Component {
   render(): ReactNode {
     return (
-      // <HeaderContainer theme={theme} style={{zIndex:2}}>
       <HeaderContainer theme={theme} urlImg={{ ImgContainer }}>
         <Navbar />
         <InnerBox>

@@ -82,16 +82,8 @@ class CardContent extends Component<{
     const { btnNavMgs } = this.props.btnMsg;
     return (
       <StyleCardContent theme={theme} fonts={fonts}>
-        {/* <TitleCard fonts={fonts}>Be the first to be test</TitleCard> */}
         <TitleCard fonts={fonts}>{title}</TitleCard>
-        {/* <Content fonts={fonts}>
-          Hi, I'm Louis Graham, the founder of the company. Book a demo call
-          with me to become a beta tester for our app and kickstart your
-          company. Apply for access below and I’ll be in touch to schedule a
-          call.
-        </Content> */}
         <Content fonts={fonts}>{content}</Content>
-        {/* <PrimaryBtn message="Apple for accesse" /> */}
         <PrimaryBtn message={btnNavMgs} />
       </StyleCardContent>
     );

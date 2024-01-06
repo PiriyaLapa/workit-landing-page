@@ -33,6 +33,7 @@ const StyleSecondary = styled(StylePrimaryBtn)`
         border-bottom: 3px solid ${(props) => props.theme.EncaplyptusColor}
     }
 `;
+
 interface MessageProps{
   message:string;
 }

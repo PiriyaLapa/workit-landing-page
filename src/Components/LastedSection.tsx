@@ -11,13 +11,13 @@ const LastedContainer = styled.div<{ theme: typeof theme }>`
 `;
 
 const StyleProfile = styled.img`
-  width: 20%;
+  width: 35%;
   height: auto;
 `;
 
 interface urlImgProps {
   urlImg: string;
-}
+};
 
 class Profile extends Component<urlImgProps> {
   render(): ReactNode {

@@ -41,16 +41,22 @@ interface MessageProps {
   message: string;
 }
 
-export class PrimaryBtn extends Component<MessageProps & {fontWeight?:number}> {
+export class PrimaryBtn extends Component<
+  MessageProps & { fontWeight?: number }
+> {
   render(): ReactNode {
-    const {message,fontWeight} = this.props;
-    return <StylePrimaryBtn theme={theme} fontWeight={fontWeight}>{message}</StylePrimaryBtn>;
+    const { message, fontWeight } = this.props;
+    return (
+      <StylePrimaryBtn theme={theme} fontWeight={fontWeight}>
+        {message}
+      </StylePrimaryBtn>
+    );
   }
 }
 
 export class SecondaryBtn extends Component<MessageProps> {
   render(): ReactNode {
-    const message = this.props.message;
+    const { message } = this.props;
     return <StyleSecondary theme={theme}>{message}</StyleSecondary>;
   }
 }

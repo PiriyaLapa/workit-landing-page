@@ -1,7 +1,8 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-import { theme } from "../utility";
+import { theme, fonts } from "../utility";
 import ProfileImg from "../assets/Profile_picture.png";
+import { PrimaryBtn } from "./ButtonComponents";
 
 const LastedContainer = styled.div<{ theme: typeof theme }>`
   width: 100%;
@@ -24,12 +25,43 @@ class Profile extends Component<urlImgProps> {
   }
 }
 
+const InnerBox = styled.div`
+  width: 1112px;
+  height: 674.64;
+`;
+
+
+const StyleCardContent = styled.div<{theme:typeof theme, fonts:typeof fonts}>`
+    background-color:${(props) => props.theme.darkPurpleColor};
+    color:${(props) => props.theme.WhiteColor};
+  `;
+
+class CardContent extends Component {
+  render(): ReactNode {
+    return (
+      <StyleCardContent theme={theme} fonts={fonts}>
+        <TitleCard fonts={fonts}>Be the first to be test</Title>
+        <Content fonts={fonts}>
+          Hi, I'm Louis Graham, the founder of the company. Book a demo call
+          with me to become a beta tester for our app and kickstart your
+          company. Apply for access below and I’ll be in touch to schedule a
+          call.
+        </Content>
+        <PrimaryBtn />
+      </StyleCardContent>
+    );
+  }
+}
+
 export class LastedSection extends Component {
   render(): ReactNode {
     return (
       <LastedContainer theme={theme}>
-        <h1>Lorem ipsum dolor sit amet.</h1>
-        <Profile urlImg={ProfileImg} />
+        <InnerBox>
+          <h1>Lorem ipsum dolor sit amet.</h1>
+          <Profile urlImg={ProfileImg} />
+          <CardContent />
+        </InnerBox>
       </LastedContainer>
     );
   }

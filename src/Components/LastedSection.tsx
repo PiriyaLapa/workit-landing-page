@@ -17,7 +17,7 @@ const StyleProfile = styled.img`
 
 interface urlImgProps {
   urlImg: string;
-};
+}
 
 class Profile extends Component<urlImgProps> {
   render(): ReactNode {
@@ -84,7 +84,7 @@ class CardContent extends Component<{
       <StyleCardContent theme={theme} fonts={fonts}>
         <TitleCard fonts={fonts}>{title}</TitleCard>
         <Content fonts={fonts}>{content}</Content>
-        <PrimaryBtn message={btnNavMgs} />
+        <PrimaryBtn message={btnNavMgs} fontWeight={400} />
       </StyleCardContent>
     );
   }

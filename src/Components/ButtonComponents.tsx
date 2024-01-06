@@ -2,12 +2,15 @@ import { Component, ReactNode } from "react";
 import styled from "styled-components";
 import { theme } from "../utility";
 
-const StylePrimaryBtn = styled.button<{ theme: typeof theme }>`
+const StylePrimaryBtn = styled.button<{
+  theme: typeof theme;
+  fontWeight?: number;
+}>`
   height: 3.813em;
   width: 15%;
   background-color: ${(props) => props.theme.EncaplyptusColor};
   font-size: 19px;
-  font-weight: 800;
+  font-weight: ${(props) => props.fontWeight || 800};
 
   &:hover {
     background-color: ${(props) => props.theme.darkPurpleColor};
@@ -18,35 +21,36 @@ const StylePrimaryBtn = styled.button<{ theme: typeof theme }>`
 `;
 
 const StyleSecondary = styled(StylePrimaryBtn)`
-    background-color:${(props) => props.theme.darkPurpleColor};
-    color:${(props) => props.theme.WhiteColor};
-    border:none;
+  background-color: ${(props) => props.theme.darkPurpleColor};
+  color: ${(props) => props.theme.WhiteColor};
+  border: none;
+  border-bottom: 3px solid ${(props) => props.theme.EncaplyptusColor};
+  width: auto;
+  height: 43px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  &:hover {
+    border: none;
+    color: ${(props) => props.theme.EncaplyptusColor};
     border-bottom: 3px solid ${(props) => props.theme.EncaplyptusColor};
-    width:auto;
-    height:43px;
-    margin-right:10px;
-    font-size:18px;
-    font-weight:400;
-    &:hover {
-        border:none;
-        color:${(props) => props.theme.EncaplyptusColor};
-        border-bottom: 3px solid ${(props) => props.theme.EncaplyptusColor}
-    }
+  }
 `;
 
-interface MessageProps{
-  message:string;
+interface MessageProps {
+  message: string;
 }
 
-export class PrimaryBtn extends Component<MessageProps> {
+export class PrimaryBtn extends Component<MessageProps & {fontWeight?:number}> {
   render(): ReactNode {
-    return <StylePrimaryBtn theme={theme}>{this.props.message}</StylePrimaryBtn>;
+    const {message,fontWeight} = this.props;
+    return <StylePrimaryBtn theme={theme} fontWeight={fontWeight}>{message}</StylePrimaryBtn>;
   }
 }
 
-
-export class SecondaryBtn extends Component<MessageProps>{
+export class SecondaryBtn extends Component<MessageProps> {
   render(): ReactNode {
-    return <StyleSecondary theme={theme}>{this.props.message}</StyleSecondary>;
+    const message = this.props.message;
+    return <StyleSecondary theme={theme}>{message}</StyleSecondary>;
   }
 }

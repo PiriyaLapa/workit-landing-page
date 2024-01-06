@@ -26,7 +26,7 @@ class Profile extends Component<urlImgProps> {
 }
 
 const InnerBox = styled.div`
-  width: 1112px;
+  width: 69.50%;
   height: 674.74px;
   margin: 0 auto;
 `;

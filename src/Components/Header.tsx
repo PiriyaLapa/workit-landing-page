@@ -24,7 +24,6 @@ const HeaderContainer = styled.div<{
   margin: 0 auto;
   background-color: ${(props) => props.theme.GhostWhiteColor};
 `;
-
 const InnerBox = styled.div`
   display: block;
   align-items: center;
@@ -32,7 +31,6 @@ const InnerBox = styled.div`
     margin: 38px auto;
   }
 `;
-
 const TitleHeader = styled.span`
   width: 30%;
   height: auto;
@@ -44,6 +42,9 @@ const TitleHeader = styled.span`
   display: block;
   color: white;
   margin: 120px auto 100px auto;
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 interface SpringProps {
@@ -53,6 +54,10 @@ const StyleSpring = styled.img`
   position: absolute;
   top: 40%;
   left: -1px;
+  @media only screen and (max-width: 768px) {
+    top:23%;
+    left: -70px;
+  }
 `;
 
 const StyledSmallSpring = styled(StyleSpring)`
@@ -63,6 +68,9 @@ const StyledSmallSpring = styled(StyleSpring)`
   }
   @media only screen and (max-width: 990px) {
     left: 88%;
+  }
+  @media only screen and (max-width: 768px) {
+    left: 83%;
   }
   @media only screen and (max-width: 733px) {
     left: 72%;
@@ -92,7 +100,7 @@ export default class Header extends Component {
       <HeaderContainer theme={theme} urlImg={{ ImgContainer }}>
         <Navbar />
         <InnerBox>
-          <TitleHeader>Data tailored to your deep.</TitleHeader>
+          <TitleHeader>Data tailored to your needs.</TitleHeader>
           <PrimaryBtn message="Learn more" />
           <HeroImg urlImg={HeroImgSource} />
         </InnerBox>

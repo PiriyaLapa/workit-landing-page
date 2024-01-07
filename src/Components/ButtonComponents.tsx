@@ -18,6 +18,9 @@ const StylePrimaryBtn = styled.button<{
     border: 1px solid ${(props) => props.theme.EncaplyptusColor};
     transition: 0.5s;
   }
+  @media only screen and (max-width:768px){
+    width:25%; 
+  }
 `;
 
 const StyleSecondary = styled(StylePrimaryBtn)`

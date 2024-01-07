@@ -18,6 +18,14 @@ const StyledHeroImg = styled.img`
     width: 36%;
     top: 32%;
   }
+  @media only screen and (max-width: 768px){
+    position:relative;
+    top:50%;
+    left:95%;
+    transform:transfer(-170%,90%);
+    width:70%;
+
+  }
 `;
 
 export class HeroImg extends Component<ImgHeroProps> {

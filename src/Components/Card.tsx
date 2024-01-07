@@ -15,20 +15,37 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   color: ${(props) => props.theme.darkPurpleColor};
   text-align: center;
   margin: 45px auto;
+  @media only screen and (max-width: 768px) {
+    background-color: yellow;
+    display: inline-block;
+    margin: 0 20px;
+  }
 `;
 
 const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>`
   margin: 30px 0;
+  @media only screen and (max-width: 768px) {
+    display: inline-block;
+  }
 `;
 
 const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    background-color: green;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+  }
 `;
 
 const ContentCard = styled.p<{ fonts: typeof fonts }>`
   font-family: ${(props) => props.fonts.SecondaryFont};
   margin: 20px 13px;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+  }
 `;
 
 const CardWrap = styled.div<{ theme: typeof theme }>`
@@ -49,10 +66,10 @@ export default class Card extends Component<CardProps> {
             <CircleShape shape={shape} fonts={fonts}>
               <h2>{data.id}</h2>
             </CircleShape>
-            <TitleCard shape={shape} fonts={fonts}>
-              {data.title}
-            </TitleCard>
-            <ContentCard fonts={fonts}>{data.content}</ContentCard>
+              <TitleCard shape={shape} fonts={fonts}>
+                {data.title}
+              </TitleCard>
+              <ContentCard fonts={fonts}>{data.content}</ContentCard>
           </CardWrap>
         ))}
       </CardContainer>

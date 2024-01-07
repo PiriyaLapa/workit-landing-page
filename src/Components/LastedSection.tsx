@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { theme, fonts, contentCard, btnMessage } from "../utility";
 import ProfileImg from "../assets/Profile_picture.png";
 import { PrimaryBtn } from "./ButtonComponents";
-import SpringUrl from '../assets/Spring3.png';
+import SpringUrl from "../assets/Spring3.png";
+import IconImg from "../assets/IconImg.png";
 
 const LastedContainer = styled.div<{ theme: typeof theme }>`
   width: 100%;
@@ -27,7 +28,7 @@ class Profile extends Component<urlImgProps> {
 }
 
 const InnerBox = styled.div`
-  width: 69.50%;
+  width: 69.5%;
   height: 674.74px;
   margin: 0 auto;
 `;
@@ -36,7 +37,6 @@ const StyleCardContent = styled.div<{
   theme: typeof theme;
   fonts: typeof fonts;
 }>`
-
   background-color: ${(props) => props.theme.darkPurpleColor};
   color: ${(props) => props.theme.WhiteColor};
   width: 55%;
@@ -44,10 +44,10 @@ const StyleCardContent = styled.div<{
   float: right;
   text-align: left;
   padding: 5%;
-  position:relative;
-  left:-11%;
-  top:26%;
-  line-height:2em;
+  position: relative;
+  left: -11%;
+  top: 26%;
+  line-height: 2em;
 
   * {
     margin: 0.6em 0;
@@ -99,26 +99,39 @@ class CardContent extends Component<{
   }
 }
 const StyledSpringImg = styled.img`
-  width:30%;
-  height:auto;
-  position:relative;
-  top:15px;
-  left:20%;
+  width: 30%;
+  height: auto;
+  position: relative;
+  top: 15px;
+  left: 20%;
 `;
 
-interface SpringProps{
-  urlImg:string;
-} 
+interface SpringProps {
+  urlImg: string;
+}
 
-class SpringImg extends Component<SpringProps>{
-  render():ReactNode{
-    const {urlImg} = this.props
-    return(
-      <StyledSpringImg src={urlImg} alt="SpringImg"/>
-    )
+class SpringImg extends Component<SpringProps> {
+  render(): ReactNode {
+    const { urlImg } = this.props;
+    return <StyledSpringImg src={urlImg} alt="SpringImg" />;
   }
 }
 
+interface IconProps {
+  urlImg: string;
+}
+const StyledIcon = styled.img`
+  width: 5%;
+  height: auto;
+  margin: 5% auto;
+`;
+
+class Icon extends Component<IconProps> {
+  render(): ReactNode {
+    const { urlImg} = this.props;
+    return <StyledIcon src={urlImg} alt="Iconsim" />;
+  }
+}
 
 export class LastedSection extends Component {
   render(): ReactNode {
@@ -128,6 +141,7 @@ export class LastedSection extends Component {
           <Profile urlImg={ProfileImg} />
           <CardContent data={contentCard} btnMsg={btnMessage} />
         </InnerBox>
+        <Icon urlImg={IconImg} />
       </LastedContainer>
     );
   }

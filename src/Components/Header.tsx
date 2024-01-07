@@ -7,18 +7,7 @@ import ImgContainer from "../assets/Rectangle.png";
 import { HeroImg } from "./ImgHero";
 import HeroImgSource from "../assets/moblie.png";
 import BigSpringImg from "../assets/BigString.png";
-import SmallPringImg from '../assets/SmallSpring.png';
-// const HeaderContainer = styled.div<{
-//   theme: typeof theme;
-// }>`
-//   test 1
-//   width: 1440px;
-//   height: 730px;
-//   margin: 0 auto;
-//   clip-path: ${(props) => props.theme.HeaderShape};
-//   background-color: ${(props) => props.theme.darkPurpleColor};
-//   z-index:1;
-// `;
+import SmallPringImg from "../assets/SmallSpring.png";
 
 const HeaderContainer = styled.div<{
   theme: typeof theme;
@@ -67,24 +56,32 @@ const StyleSpring = styled.img`
 `;
 
 const StyledSmallSpring = styled(StyleSpring)`
-  top:45%;
-  left:89%;
+  top: 45%;
+  left: 93%;
+  @media only screen and (max-width:1400px) {
+    left:89%; 
+  }
+  @media only screen and (max-width:990px) {
+    left:88%; 
+  }
+  @media only screen and (max-width:700px) {
+    left:82%; 
+  }
 `;
-  
+
 class BigSpring extends Component<SpringProps> {
   render(): ReactNode {
-    return <StyleSpring src={this.props.urlImg} alt="springImg" />;
+    const { urlImg } = this.props;
+    return <StyleSpring src={urlImg} alt="springImg" />;
   }
 }
 
-class SmallSpring extends Component<SpringProps>{
-  render():ReactNode{
-    return(
-    <StyledSmallSpring src={this.props.urlImg} alt="small spring" />
-    )
+class SmallSpring extends Component<SpringProps> {
+  render(): ReactNode {
+    const { urlImg } = this.props;
+    return <StyledSmallSpring src={urlImg} alt="small spring" />;
   }
-} 
-
+}
 
 export default class Header extends Component {
   render(): ReactNode {

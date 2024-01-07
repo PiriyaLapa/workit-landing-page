@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { theme, fonts, contentCard, btnMessage } from "../utility";
 import ProfileImg from "../assets/Profile_picture.png";
 import { PrimaryBtn } from "./ButtonComponents";
+import SpringUrl from '../assets/Spring3.png';
 
 const LastedContainer = styled.div<{ theme: typeof theme }>`
   width: 100%;
@@ -42,8 +43,12 @@ const StyleCardContent = styled.div<{
   float: right;
   text-align: left;
   padding: 5%;
+  position:relative;
+  left:-11%;
+  top:26%;
+  line-height:2em;
   * {
-    margin: 0.3em 0;
+    margin: 0.6em 0;
   }
   :nth-child(3) {
     width: 40%;
@@ -85,10 +90,32 @@ class CardContent extends Component<{
         <TitleCard fonts={fonts}>{title}</TitleCard>
         <Content fonts={fonts}>{content}</Content>
         <PrimaryBtn message={btnNavMgs} fontWeight={400} />
+        <SpringImg urlImg={SpringUrl} />
       </StyleCardContent>
     );
   }
 }
+const StyledSpringImg = styled.img`
+  width:30%;
+  height:auto;
+  position:relative;
+  top:110px;
+  left:40%;
+`;
+
+interface SpringProps{
+  urlImg:string;
+} 
+
+class SpringImg extends Component<SpringProps>{
+  render():ReactNode{
+    const {urlImg} = this.props
+    return(
+      <StyledSpringImg src={urlImg} alt="SpringImg"/>
+    )
+  }
+}
+
 
 export class LastedSection extends Component {
   render(): ReactNode {

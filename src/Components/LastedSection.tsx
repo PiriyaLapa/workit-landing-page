@@ -36,10 +36,11 @@ const StyleCardContent = styled.div<{
   theme: typeof theme;
   fonts: typeof fonts;
 }>`
+
   background-color: ${(props) => props.theme.darkPurpleColor};
   color: ${(props) => props.theme.WhiteColor};
   width: 55%;
-  height: auto;
+  height: 410px;
   float: right;
   text-align: left;
   padding: 5%;
@@ -47,9 +48,11 @@ const StyleCardContent = styled.div<{
   left:-11%;
   top:26%;
   line-height:2em;
+
   * {
     margin: 0.6em 0;
   }
+
   :nth-child(3) {
     width: 40%;
     margin-top: 8%;
@@ -99,8 +102,8 @@ const StyledSpringImg = styled.img`
   width:30%;
   height:auto;
   position:relative;
-  top:110px;
-  left:40%;
+  top:15px;
+  left:20%;
 `;
 
 interface SpringProps{

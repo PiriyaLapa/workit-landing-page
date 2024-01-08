@@ -15,8 +15,9 @@ const LastedContainer = styled.div<{ theme: typeof theme }>`
 const StyleProfile = styled.img`
   width: 35%;
   height: auto;
-  @media only screen and (max-width:768px){
-    width:40%;
+  @media only screen and (max-width: 768px) {
+    width: 40%;
+    float: left;
   }
 `;
 
@@ -35,6 +36,10 @@ const InnerBox = styled.div`
   width: 69.5%;
   height: 674.74px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const StyleCardContent = styled.div<{

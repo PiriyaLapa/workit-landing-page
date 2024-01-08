@@ -17,7 +17,6 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   margin: 45px auto;
 
   @media only screen and (max-width: 768px) {
-    background-color: yellow;
     display: inline-block;
     margin: 3% 20px;
   }
@@ -69,6 +68,23 @@ const CardInner = styled.div`
   }
 `;
 
+const InnerContent = styled.div`
+  @media only screen and (max-width: 768px) {
+    border: 1px solid blue;
+    width: 60%;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+`;
+
+const InnerHeader = styled.div`
+  border: 1px solid blue;
+  display:inline-block;
+`;
+
 export default class Card extends Component<CardProps> {
   render(): ReactNode {
     const { Data } = this.props;
@@ -76,16 +92,18 @@ export default class Card extends Component<CardProps> {
       <CardContainer>
         {Data.map((data, index) => (
           <CardWrap key={index} theme={theme}>
-              <CircleShape shape={shape} fonts={fonts}>
-                <h2>{data.id}</h2>
-              </CircleShape>
             <CardInner>
-              <div>
+              <InnerHeader>
+                <CircleShape shape={shape} fonts={fonts}>
+                  <h2>{data.id}</h2>
+                </CircleShape>
+              </InnerHeader>
+              <InnerContent>
                 <TitleCard shape={shape} fonts={fonts}>
                   {data.title}
                 </TitleCard>
-              </div>
-              <ContentCard fonts={fonts}>{data.content}</ContentCard>
+                <ContentCard fonts={fonts}>{data.content}</ContentCard>
+              </InnerContent>
             </CardInner>
           </CardWrap>
         ))}

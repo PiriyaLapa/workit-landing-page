@@ -15,6 +15,9 @@ const LastedContainer = styled.div<{ theme: typeof theme }>`
 const StyleProfile = styled.img`
   width: 35%;
   height: auto;
+  @media only screen and (max-width:768px){
+    width:40%;
+  }
 `;
 
 interface urlImgProps {
@@ -23,7 +26,8 @@ interface urlImgProps {
 
 class Profile extends Component<urlImgProps> {
   render(): ReactNode {
-    return <StyleProfile src={this.props.urlImg} alt="ProfileImg" />;
+    const { urlImg } = this.props;
+    return <StyleProfile src={urlImg} alt="ProfileImg" />;
   }
 }
 
@@ -128,7 +132,7 @@ const StyledIcon = styled.img`
 
 class Icon extends Component<IconProps> {
   render(): ReactNode {
-    const { urlImg} = this.props;
+    const { urlImg } = this.props;
     return <StyledIcon src={urlImg} alt="Iconsim" />;
   }
 }

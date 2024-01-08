@@ -55,7 +55,7 @@ const StyleSpring = styled.img`
   top: 40%;
   left: -1px;
   @media only screen and (max-width: 768px) {
-    top:23%;
+    top: 23%;
     left: -70px;
   }
 `;

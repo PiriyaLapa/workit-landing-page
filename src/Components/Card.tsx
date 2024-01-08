@@ -33,7 +33,6 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   @media only screen and (max-width: 768px) {
-    background-color: green;
     display: inline-block;
     text-align: left;
     padding: 10px;
@@ -57,7 +56,6 @@ interface CardProps {
 }
 const CardInner = styled.div`
   height: auto;
-  border: 1px solid red;
   @media only screen and (max-width: 768px) {
     width: 100%;
     float: right;
@@ -70,7 +68,6 @@ const CardInner = styled.div`
 
 const InnerContent = styled.div`
   @media only screen and (max-width: 768px) {
-    border: 1px solid blue;
     width: 60%;
     display: inline-block;
     position: relative;
@@ -81,8 +78,13 @@ const InnerContent = styled.div`
 `;
 
 const InnerHeader = styled.div`
-  border: 1px solid blue;
-  display:inline-block;
+  @media only screen and (max-width: 768px) {
+    display:inline-block;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-550%,-120%);
+  }
 `;
 
 export default class Card extends Component<CardProps> {

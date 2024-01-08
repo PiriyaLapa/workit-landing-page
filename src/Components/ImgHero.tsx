@@ -6,13 +6,13 @@ interface ImgHeroProps {
 }
 
 const StyledHeroImg = styled.img`
-  width: 39%;
+  width: 55%;
   height: auto;
   display: block;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-135%, 30%);
+  transform: translate(-90%, 30%);
 
   @media only screen and (min-width: 1669px) {
     width: 36%;
@@ -20,18 +20,11 @@ const StyledHeroImg = styled.img`
   }
 
   @media only screen and (max-width: 768px) {
-    /* position: relative;
+    width: 75%;
+    position: relative;
     top: 50%;
-    left: 95%;
-    transform: transfer(-170%, 90%);
-    /* width: 70%; */
-    /* border: 1px solid red; */ 
-    
-    width:68%;
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-65%,65%);
+    left: 50%;
+    transform: translate(-65%, 65%);
   }
 `;
 

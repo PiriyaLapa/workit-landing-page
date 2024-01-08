@@ -68,7 +68,7 @@ const CardInner = styled.div`
 
 const InnerContent = styled.div`
   @media only screen and (max-width: 768px) {
-    width: 60%;
+    width: 90%;
     display: inline-block;
     position: relative;
     top: 50%;
@@ -83,7 +83,7 @@ const InnerHeader = styled.div`
     position:relative;
     top:50%;
     left:50%;
-    transform:translate(-550%,-120%);
+    transform:translate(-750%,-120%);
   }
 `;
 

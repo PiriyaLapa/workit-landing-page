@@ -45,7 +45,7 @@ const TitleHeader = styled.span`
   @media only screen and (max-width: 768px) {
     width: 80%;
     ::after {
-      content: "";
+      content: "tailored";
       position: absolute;
       left: 0;
       bottom: -2px;

@@ -121,7 +121,7 @@ const StyledSpringImg = styled.img`
   top: 15px;
   left: 20%;
   @media only screen and (max-width:768px){
-    width:45%;
+    /* width:45%; */
   }
 `;
 

@@ -34,3 +34,22 @@ export class HeroImg extends Component<ImgHeroProps> {
     return <StyledHeroImg src={urlImg} alt="ImageHero" />;
   }
 }
+
+interface ImgLineProps{
+  urlImg:string;
+}
+
+const StyledLineImg = styled.img`
+  @media only screen and (max-width:768px){
+    width:30%;
+  }
+
+`
+export class LineImg extends Component<ImgLineProps>{
+  render():ReactNode{
+    const {urlImg} = this.props;
+    return(
+      <StyledLineImg src={urlImg} alt="LineImg" />
+    )
+  }
+}

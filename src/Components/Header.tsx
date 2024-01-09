@@ -4,17 +4,17 @@ import { theme } from "../utility";
 import Navbar from "./Navbar";
 import { PrimaryBtn } from "./ButtonComponents";
 import ImgContainer from "../assets/Rectangle.png";
-import { HeroImg } from "./ImgHero";
+import { HeroImg, LineImg } from "./ImgHero";
 import HeroImgSource from "../assets/moblie.png";
 import BigSpringImg from "../assets/BigString.png";
 import SmallPringImg from "../assets/SmallSpring.png";
+import Line from "../assets/line.png";
 
 const HeaderContainer = styled.div<{
   theme: typeof theme;
   urlImg: { ImgContainer: string };
 }>`
   width: 100%;
-  // height: auto;
   height: 1000px;
   background-image: url(${(props) => props.urlImg.ImgContainer});
   background-size: cover;
@@ -44,6 +44,15 @@ const TitleHeader = styled.span`
   margin: 120px auto 100px auto;
   @media only screen and (max-width: 768px) {
     width: 80%;
+    ::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: red;
+    }
   }
 `;
 
@@ -103,6 +112,7 @@ export default class Header extends Component {
           <TitleHeader>Data tailored to your needs.</TitleHeader>
           <PrimaryBtn message="Learn more" />
           <HeroImg urlImg={HeroImgSource} />
+          <LineImg urlImg={Line} />
         </InnerBox>
         <BigSpring urlImg={BigSpringImg} />
         <SmallSpring urlImg={SmallPringImg} />

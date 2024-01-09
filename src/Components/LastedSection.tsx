@@ -38,7 +38,7 @@ const InnerBox = styled.div`
   margin: 0 auto;
 
   @media only screen and (max-width: 768px) {
-    width:95%;
+    width: 95%;
   }
 `;
 
@@ -67,12 +67,12 @@ const StyleCardContent = styled.div<{
     margin-top: 8%;
     float: left;
   }
-  @media only screen and (max-width:768px){
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-67%,-115%);
-    width:75%;
+  @media only screen and (max-width: 768px) {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-67%, -115%);
+    width: 75%;
   }
 `;
 
@@ -120,8 +120,8 @@ const StyledSpringImg = styled.img`
   position: relative;
   top: 15px;
   left: 20%;
-  @media only screen and (max-width:768px){
-    /* width:45%; */
+  @media only screen and (max-width: 768px) {
+    width:45%;
   }
 `;
 

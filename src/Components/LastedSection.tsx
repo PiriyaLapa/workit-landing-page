@@ -67,6 +67,13 @@ const StyleCardContent = styled.div<{
     margin-top: 8%;
     float: left;
   }
+  @media only screen and (max-width:768px){
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-67%,-115%);
+    width:75%;
+  }
 `;
 
 const TitleCard = styled.h1<{ fonts: typeof fonts }>`
@@ -113,6 +120,9 @@ const StyledSpringImg = styled.img`
   position: relative;
   top: 15px;
   left: 20%;
+  @media only screen and (max-width:768px){
+    width:45%;
+  }
 `;
 
 interface SpringProps {

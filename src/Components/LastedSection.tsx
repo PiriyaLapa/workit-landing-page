@@ -121,7 +121,7 @@ const StyledSpringImg = styled.img`
   top: 15px;
   left: 20%;
   @media only screen and (max-width: 768px) {
-    width:45%;
+    width: 45%;
   }
 `;
 
@@ -143,6 +143,15 @@ const StyledIcon = styled.img`
   width: 5%;
   height: auto;
   margin: 5% auto;
+  @media only screen and (max-width: 768px) {
+    width: 13%;
+    height: auto;
+    margin: 10% auto;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform:translate(-100%,-310%);
+  }
 `;
 
 class Icon extends Component<IconProps> {

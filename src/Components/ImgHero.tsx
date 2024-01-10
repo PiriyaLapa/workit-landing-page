@@ -47,6 +47,10 @@ interface ImgLineProps {
 }
 
 const StyledLineImg = styled.img`
+  width:17%;
+  position:absolute;
+  top:225px;
+  right:540px;
   @media only screen and (max-width: 768px) {
     position: absolute;
     top: 225px;

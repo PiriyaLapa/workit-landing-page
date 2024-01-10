@@ -1,7 +1,7 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-import { theme } from "../utility";
-import { SecondaryBtn } from "./ButtonComponents";
+import { theme } from "../../utility";
+import { SecondaryBtn } from "../ButtonComponents";
 
 const StyledNavbar = styled.nav<{ theme: typeof theme }>`
   width: 90%;

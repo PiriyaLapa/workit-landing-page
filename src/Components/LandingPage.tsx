@@ -1,6 +1,6 @@
 import { Component, ReactNode } from "react";
 import { ContainerLandingPage } from "../Components/styledComponent";
-import Header from "./Header";
+import Header from "../Components/HeaderSection/Header";
 import MiddleSection from "./MiddleSection";
 import { LastedSection } from "./LastedSection";
 

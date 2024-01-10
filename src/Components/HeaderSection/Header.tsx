@@ -1,14 +1,14 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-import { theme } from "../utility";
+import { theme } from "../../utility";
 import Navbar from "./Navbar";
-import { PrimaryBtn } from "./ButtonComponents";
-import ImgContainer from "../assets/Rectangle.png";
-import { HeroImg, LineImg } from "./ImgHero";
-import HeroImgSource from "../assets/moblie.png";
-import BigSpringImg from "../assets/BigString.png";
-import SmallPringImg from "../assets/SmallSpring.png";
-import Line from "../assets/line.png";
+import { PrimaryBtn } from "../ButtonComponents";
+import ImgContainer from "../../assets/Rectangle.png";
+import { HeroImg, LineImg } from "../ImgHero";
+import HeroImgSource from "../../assets/moblie.png";
+import BigSpringImg from "../../assets/BigString.png";
+import SmallPringImg from "../../assets/SmallSpring.png";
+import Line from "../../assets/line.png";
 
 const HeaderContainer = styled.div<{
   theme: typeof theme;

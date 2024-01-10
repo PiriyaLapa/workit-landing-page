@@ -20,6 +20,15 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
     display: inline-block;
     margin: 3% 20px;
   }
+  @media only screen and (max-width: 376px) {
+    display: block;
+    background-color: red;
+    text-align: center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
 `;
 
 const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>`
@@ -75,15 +84,18 @@ const InnerContent = styled.div`
     left: 50%;
     transform: translate(-50%);
   }
+  @media only screen and (max-width: 376px) {
+    text-align: center;
+  }
 `;
 
 const InnerHeader = styled.div`
   @media only screen and (max-width: 768px) {
-    display:inline-block;
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translate(-750%,-120%);
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-750%, -120%);
   }
 `;
 

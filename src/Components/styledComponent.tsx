@@ -10,3 +10,4 @@ export const ContainerLandingPage = styled.div<{
   text-align: center;
 `;
 
+// Header Styled component

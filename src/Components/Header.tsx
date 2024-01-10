@@ -14,6 +14,7 @@ const HeaderContainer = styled.div<{
   theme: typeof theme;
   urlImg: { ImgContainer: string };
 }>`
+
   width: 100%;
   height: 1000px;
   background-image: url(${(props) => props.urlImg.ImgContainer});
@@ -44,8 +45,10 @@ const TitleHeader = styled.span`
   margin: 120px auto 100px auto;
   @media only screen and (max-width: 768px) {
     width: 100%;
-    color: red;
     font-size: 4em;
+  }
+  @media only screen and (max-width:375px){
+    width:100%;
   }
 `;
 
@@ -61,8 +64,8 @@ const StyleSpring = styled.img`
     left: -70px;
   }
 
-  @media only screen and (max-width: 375px) {
-    display: none;
+  @media only screen and (max-width: 376px) {
+    display:none;
   }
 `;
 

@@ -23,6 +23,9 @@ const HeaderContainer = styled.div<{
   color: ${(props) => props.theme.WhiteColor};
   margin: 0 auto;
   background-color: ${(props) => props.theme.GhostWhiteColor};
+  @media only screen and (max-width:376px){
+    height:auto;
+  }
 `;
 const InnerBox = styled.div`
   display: block;

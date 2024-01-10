@@ -10,6 +10,8 @@ const LastedContainer = styled.div<{ theme: typeof theme }>`
   width: 100%;
   height: 500px;
   background-color: ${(props) => props.theme.WhiteColor};
+  @media only screen and (max-width: 376px) {
+  }
 `;
 
 const StyleProfile = styled.img`
@@ -18,6 +20,9 @@ const StyleProfile = styled.img`
   @media only screen and (max-width: 768px) {
     width: 40%;
     float: left;
+  }
+  @media only screen and (max-width: 376px) {
+    width: 100%;
   }
 `;
 
@@ -74,6 +79,24 @@ const StyleCardContent = styled.div<{
     transform: translate(-73%, -115%);
     width: 73%;
   }
+
+  @media only screen and (max-width: 376px) {
+    width: 95%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -100%);
+    text-align: center;
+    :nth-child(3) {
+      width: 60%;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-49%, 150%);
+      text-align: center;
+    }
+  }
 `;
 
 const TitleCard = styled.h1<{ fonts: typeof fonts }>`
@@ -123,6 +146,10 @@ const StyledSpringImg = styled.img`
   @media only screen and (max-width: 768px) {
     width: 45%;
   }
+
+  @media only screen and (max-width: 376px) {
+    display: none;
+  }
 `;
 
 interface SpringProps {
@@ -148,9 +175,9 @@ const StyledIcon = styled.img`
     height: auto;
     margin: 10% auto;
     position: relative;
-    top:50%;
-    left:50%;
-    transform:translate(-100%,-310%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -310%);
   }
 `;
 

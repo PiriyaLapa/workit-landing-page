@@ -48,6 +48,7 @@ const CardContainer = styled.div`
     text-align: left;
     padding: 10px;
   }
+
 `;
 
 const ContentCard = styled.p<{ fonts: typeof fonts }>`

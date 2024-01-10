@@ -19,6 +19,9 @@ const MiddleContainer = styled.div<{
   position: relative;
   top: -70px;
   z-index: -1;
+  @media only screen and (max-width:376px){
+    width:100%;
+  }
 `;
 const MiddleInnerBox = styled.div`
   width: 80%;

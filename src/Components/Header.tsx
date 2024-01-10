@@ -75,15 +75,20 @@ const StyledSmallSpring = styled(StyleSpring)`
   @media only screen and (max-width: 1400px) {
     left: 89%;
   }
+
   @media only screen and (max-width: 990px) {
     left: 88%;
   }
+
   @media only screen and (max-width: 768px) {
-    left: 83%;
+    // left: 83%;
+    left: 83.69%;
   }
+
   @media only screen and (max-width: 733px) {
     left: 72%;
   }
+
   @media only screen and (max-width: 700px) {
     left: 82%;
   }

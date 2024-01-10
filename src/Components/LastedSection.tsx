@@ -71,8 +71,8 @@ const StyleCardContent = styled.div<{
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-67%, -115%);
-    width: 75%;
+    transform: translate(-73%, -115%);
+    width: 73%;
   }
 `;
 

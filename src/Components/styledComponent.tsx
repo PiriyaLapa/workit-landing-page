@@ -9,3 +9,4 @@ export const ContainerLandingPage = styled.div<{
   margin: 0 auto;
   text-align: center;
 `;
+

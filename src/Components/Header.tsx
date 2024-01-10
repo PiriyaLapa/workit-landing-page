@@ -49,6 +49,7 @@ const TitleHeader = styled.span`
   }
   @media only screen and (max-width:375px){
     width:100%;
+    font-size:3.5em;
   }
 `;
 

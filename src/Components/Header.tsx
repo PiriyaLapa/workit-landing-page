@@ -43,16 +43,9 @@ const TitleHeader = styled.span`
   color: white;
   margin: 120px auto 100px auto;
   @media only screen and (max-width: 768px) {
-    width: 80%;
-    ::after {
-      content: "tailored";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 2px;
-      background-color: red;
-    }
+    width: 100%;
+    color: red;
+    font-size: 4em;
   }
 `;
 
@@ -66,6 +59,10 @@ const StyleSpring = styled.img`
   @media only screen and (max-width: 768px) {
     top: 23%;
     left: -70px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    display: none;
   }
 `;
 

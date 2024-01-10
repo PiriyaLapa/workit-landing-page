@@ -179,6 +179,14 @@ const StyledIcon = styled.img`
     left: 50%;
     transform: translate(-100%, -310%);
   }
+  @media only screen and (max-width: 376px) {
+    width: 28%;
+    height: auto;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-172%,-290%);
+  }
 `;
 
 class Icon extends Component<IconProps> {

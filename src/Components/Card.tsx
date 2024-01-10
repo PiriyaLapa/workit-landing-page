@@ -22,12 +22,11 @@ const CircleShape = styled.div<{ shape: typeof shape; fonts: typeof fonts }>`
   }
   @media only screen and (max-width: 376px) {
     display: block;
-    background-color: red;
     text-align: center;
     position:absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%,-50%);
+    transform:translate(-50%,-530%);
   }
 `;
 
@@ -35,6 +34,9 @@ const TitleCard = styled.h1<{ shape: typeof shape; fonts: typeof fonts }>`
   margin: 30px 0;
   @media only screen and (max-width: 768px) {
     display: inline-block;
+  }
+  @media only screen and (max-width:376px){
+    width:100%;
   }
 `;
 
@@ -53,6 +55,10 @@ const ContentCard = styled.p<{ fonts: typeof fonts }>`
   margin: 20px 13px;
   @media only screen and (max-width: 768px) {
     text-align: left;
+  }
+
+  @media only screen and (max-width:376px){
+    text-align:center;
   }
 `;
 
@@ -73,6 +79,11 @@ const CardInner = styled.div`
       margin: 3% 0;
     }
   }
+
+    @media only screen and (max-width: 376px){
+      width:100%;
+    }
+  
 `;
 
 const InnerContent = styled.div`
@@ -85,6 +96,8 @@ const InnerContent = styled.div`
     transform: translate(-50%);
   }
   @media only screen and (max-width: 376px) {
+    width:100%;
+    margin: 15% auto;
     text-align: center;
   }
 `;

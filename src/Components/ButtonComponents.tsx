@@ -21,6 +21,9 @@ const StylePrimaryBtn = styled.button<{
   @media only screen and (max-width:768px){
     width:25%; 
   }
+  @media only screen and (max-width:376px){
+    width:40%;
+  }
 `;
 
 const StyleSecondary = styled(StylePrimaryBtn)`

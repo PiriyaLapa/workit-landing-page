@@ -14,7 +14,6 @@ const HeaderContainer = styled.div<{
   theme: typeof theme;
   urlImg: { ImgContainer: string };
 }>`
-
   width: 100%;
   height: 1000px;
   background-image: url(${(props) => props.urlImg.ImgContainer});
@@ -30,6 +29,12 @@ const InnerBox = styled.div`
   align-items: center;
   * {
     margin: 38px auto;
+  }
+
+  @media only screen and (max-width: 376px) {
+    :nth-child(2) {
+      margin-top: -50px;
+    }
   }
 `;
 const TitleHeader = styled.span`
@@ -47,9 +52,9 @@ const TitleHeader = styled.span`
     width: 100%;
     font-size: 4em;
   }
-  @media only screen and (max-width:375px){
-    width:100%;
-    font-size:3.5em;
+  @media only screen and (max-width: 376px) {
+    width: 100%;
+    font-size: 3.5em;
   }
 `;
 
@@ -66,7 +71,7 @@ const StyleSpring = styled.img`
   }
 
   @media only screen and (max-width: 376px) {
-    display:none;
+    display: none;
   }
 `;
 

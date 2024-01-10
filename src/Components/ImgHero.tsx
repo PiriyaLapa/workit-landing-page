@@ -26,6 +26,13 @@ const StyledHeroImg = styled.img`
     left: 50%;
     transform: translate(-65%, 65%);
   }
+  @media only screen and (max-width:376px){
+    width:95%;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50.5%,150%);
+  }
 `;
 
 export class HeroImg extends Component<ImgHeroProps> {
@@ -46,11 +53,11 @@ const StyledLineImg = styled.img`
     left: 310px;
     width: 32%;
   }
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 376px) {
     positiono: absolute;
-    top: 220.5px;
-    left: 165px;
-    width: 50%;
+    top: 210.5px;
+    left: 135px;
+    width: 46%;
   }
 `;
 export class LineImg extends Component<ImgLineProps> {
